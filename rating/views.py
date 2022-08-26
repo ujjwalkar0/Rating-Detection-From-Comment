@@ -18,8 +18,8 @@ class RatingView(APIView):
             rating = np.average(rates)
         
         print(rates, rating)
-                
-        return Response({"Rating": rating})
+
+        return Response({"Rating": rating, "Rates": rates})
 
     def post(self, request, *args, **kwargs):
         data = request.data
