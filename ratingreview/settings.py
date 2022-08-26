@@ -55,6 +55,13 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:8080',
+    'https://startupoverflowweb.netlify.app',
+]
+
 ROOT_URLCONF = 'ratingreview.urls'
 
 TEMPLATES = [

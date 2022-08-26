@@ -8,6 +8,8 @@ from rest_framework.response import Response
 from rest_framework import status
 
 class RatingView(APIView):
+    def get(self, request, id, *args, **kwargs): pass
+
     def post(self, request, *args, **kwargs):
         serializer = RatingReviewSerializer(data=request.data)
         if serializer.is_valid():
