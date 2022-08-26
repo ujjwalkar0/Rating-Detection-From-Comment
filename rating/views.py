@@ -12,11 +12,13 @@ import numpy as np
 class RatingView(APIView):
     def get(self, request, id, *args, **kwargs):
         rates = [i.rating for i in RatingReview.objects.filter(user_id=id)]
-        print(rates)
         if len(rates) == 0:
             rating = 0
         else:
             rating = np.average(rates)
+        
+        print(rates, rating)
+                
         return Response({"Rating": rating})
 
     def post(self, request, *args, **kwargs):
