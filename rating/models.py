@@ -9,7 +9,7 @@ class RatingReview(models.Model):
     que_4 = models.TextField(default=None)
     que_5 = models.TextField(default=None)
     
-    rating = models.IntegerField(default=None)
+    rating = models.IntegerField(default=None, null=True)
 
     def save(self, *args, **kwargs):
         if detect_mental_health(self.que_1)=='unstressed':

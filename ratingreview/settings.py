@@ -25,7 +25,7 @@ SECRET_KEY = '@=r-px)!i693e58%w#(s%czkiuo$%to-93igu((tfyo#qx%iwx'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['sofrec.herokuapp.com']
+ALLOWED_HOSTS = ['sofrec.herokuapp.com', '192.168.43.166']
 
 
 # Application definition
@@ -60,6 +60,7 @@ CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000',
     'http://localhost:8080',
     'https://startupoverflowweb.netlify.app',
+    
 ]
 
 ROOT_URLCONF = 'ratingreview.urls'
